@@ -33,7 +33,7 @@ You will need the communications toolbox by Matlab. Also, we use the tikz toolbo
 
 In any of the three folders above you will find some .m files along with some folders. Any of these .m files corresponds to a simulation. This files call to a initialisation file, in folder confiFiles, that configures the whole simulation. Then calls to the main core functions in the main (upper) folder.  Results are saved on ResultsXXXX. Once terminated, you can use the .m functions in the plots folder to get the figure, that will be placed in the folder figuresXXXX
 
-### Put into work
+### Put it into work
 We hope you will find the parameters in the initialization files, in folder confiFiles, intuitive enough to easily design your own. You may pick the most similar simulation to your scenario and then change parameters.
 
 
