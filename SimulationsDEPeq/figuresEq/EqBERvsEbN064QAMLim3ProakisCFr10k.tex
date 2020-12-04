@@ -1,0 +1,179 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{1.00000,0.00000,1.00000}%
+\definecolor{mycolor2}{rgb}{0.10000,0.50000,0.10000}%
+\definecolor{mycolor3}{rgb}{0.00000,0.80000,1.00000}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.952\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=20,
+xmax=30,
+xlabel style={font=\color{white!15!black}},
+xlabel={$\text{E}_\text{b}\text{/N}_\text{0}$},
+ymode=log,
+ymin=1e-06,
+ymax=1,
+yminorticks=true,
+ylabel style={font=\color{white!15!black}},
+ylabel={BER},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+yminorgrids,
+legend style={at={(0.03,0.03)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=blue, line width=1.1pt, mark=triangle, mark options={solid, rotate=180, blue}]
+  table[row sep=crcr]{%
+20	0.2469494\\
+21	0.2382496\\
+22	0.2294739\\
+23	0.2206514\\
+24	0.2117318\\
+25	0.202731\\
+26	0.1935976\\
+27	0.18423\\
+28	0.1745524\\
+29	0.1644452\\
+30	0.1538136\\
+};
+\addlegendentry{LMMSE-10}
+
+\addplot [color=orange, dotted, line width=1.1pt, mark=+, mark options={solid, orange}]
+  table[row sep=crcr]{%
+20	0.1913339\\
+21	0.1689761\\
+22	0.1395996\\
+23	0.09152459\\
+24	0.03326292\\
+25	0.005997512\\
+26	0.000615868548\\
+27	3.60839e-05\\
+28	0\\
+29	5.2002e-05\\
+30	0.000203125\\
+};
+\addlegendentry{BP-EP-3}
+
+\addplot [color=orange, line width=1.1pt, mark=+, mark options={solid, orange}]
+  table[row sep=crcr]{%
+20	0.1741565\\
+21	0.11464983\\
+22	0.11110012\\
+23	0.2019476\\
+24	0.2309223\\
+25	0.1979501\\
+26	0.14667142\\
+27	0.11162888\\
+28	0.11812317\\
+29	0.12413637\\
+30	0.08668356\\
+};
+\addlegendentry{BP-EP-10}
+
+\addplot [color=mycolor1, dotted, line width=1.1pt, mark=square, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+20	0.1940875\\
+21	0.1722977\\
+22	0.1428603\\
+23	0.09039786\\
+24	0.02098657\\
+25	0.00108237659\\
+26	2.85156e-05\\
+27	0\\
+28	0\\
+29	0\\
+30	0\\
+};
+\addlegendentry{BEP-3}
+
+\addplot [color=mycolor1, line width=1.1pt, mark=square, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+20	0.1786044\\
+21	0.08262249\\
+22	0.007690341\\
+23	0.000241846\\
+24	0\\
+25	0\\
+26	0\\
+27	0\\
+28	0\\
+29	0\\
+30	0\\
+};
+\addlegendentry{BEP-10}
+
+\addplot [color=red, line width=1.1pt, mark=diamond, mark options={solid, red}]
+  table[row sep=crcr]{%
+20	0.2039022\\
+21	0.1729713\\
+22	0.08993103\\
+23	0.018145895\\
+24	0.0015786121\\
+25	9.90242e-05\\
+26	0\\
+27	0\\
+28	0\\
+29	0\\
+30	0\\
+};
+\addlegendentry{FEP-10}
+
+\addplot [color=mycolor2, line width=1.1pt, mark=x, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+20	0.1973387\\
+21	0.1485889\\
+22	0.06730901\\
+23	0.017039888\\
+24	0.00301938137\\
+25	0.00049057738\\
+26	4.47267e-05\\
+27	9.1309e-06\\
+28	0\\
+29	0\\
+30	0\\
+};
+\addlegendentry{D-FEP-10}
+
+\addplot [color=mycolor3, dotted, line width=1.1pt, mark=o, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+20	0.1877265\\
+21	0.1608748\\
+22	0.1176836\\
+23	0.04707255\\
+24	0.006219205\\
+25	0.000288720554\\
+26	3.9551e-06\\
+27	0\\
+28	0\\
+29	0\\
+30	0\\
+};
+\addlegendentry{D-BEP-3}
+
+\addplot [color=mycolor3, line width=1.1pt, mark=o, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+20	0.1579957\\
+21	0.05879769\\
+22	0.008187801\\
+23	0.0005851562\\
+24	1.1719e-05\\
+25	0\\
+26	0\\
+27	0\\
+28	0\\
+29	0\\
+30	0\\
+};
+\addlegendentry{D-BEP-10}
+
+\end{axis}
+\end{tikzpicture}%
