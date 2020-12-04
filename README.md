@@ -21,9 +21,9 @@ Please, if you use this code cite some of these references in your work.
 ## GET STARTED
 To use the code download the files. You will find three folders whose name start with "Simulations". Each folder correspond to the simulation contained in the three citations above:
 
-- SimulationsMIMO to citation 1
-- SimulationsKSEP to citation 2
-- SumulationsDEPeq to citation 3
+- SimulationsMIMO to reference 1
+- SimulationsKSEP to reference 2
+- SumulationsDEPeq to reference 3
 
 The folder ParityCheckMatrix contains some LDPC parity matrices used.
 
@@ -33,7 +33,23 @@ You will need the communications toolbox by Matlab. Also, we use the tikz toolbo
 
 In any of the three folders above you will find some .m files along with some folders. Any of these .m files corresponds to a simulation. This files call to a initialisation file, in folder confiFiles, that configures the whole simulation. Then calls to the main core functions in the main (upper) folder.  Results are saved on ResultsXXXX. Once terminated, you can use the .m functions in the plots folder to get the figure, that will be placed in the folder figuresXXXX
 
-We hope you will find creating your simulation easy enough. You may pick the most similar simulation to your scenario and then change parameters.
+### Put into work
+We hope you will find the parameters in the initialization files, in folder confiFiles, intuitive enough to easily design your own. You may pick the most similar simulation to your scenario and then change parameters.
+
+
+### Parameters and Time
+The simulations are design to get the curves in the references. Accorindly several frames and different channels, when random ones, are simulated. We run them on CPU with 10 cores and 20 threads, using the option parfor with 20 parallel transmissions to compute an averaged BER using Monte Carlo (MC). These simulations as given might last from hours to days. 
+
+For a quick checking of the code, i.e. to run a reduced number of transmissions, go to any configuration file (in configFiles) and reduce the dataEP.numberSimulations parameter, to the number of cores/threads of your computer, and/or dataEP.numberFrames, the number of frames transmitted for every different channel realization. Then, if using random channels, either in MIMO or equalization, you may also reduce the number of realizations with parameter dataEP.numberChannels.
+
+You will also see that you may select the methods to be used as detectors. The larger the number of selected approaches the larger the needed time to perform the whole MC simulation. One of the methos is the optimal MAP detector. This approach becomes prohibitive for large channel dimensions (memory in equalization or number of antennas in MIMO) and/or larger constellations.
+
+## Disclaimer
+We provide the code for the only purpose of comparison, although you might find useful for any other task. 
+
+We apology in advance for the code could be cleaner, be more commented and also for not fully updating the help of the many functions included or fully explain the many parameters involved. We considered that overall, it was worthy to publish the code as it is. 
+
+If you find that at some parts some comment or help could make a difference, do not hesitate contacting us.
 
 ## CONTACT 
 This project is maintained by Juan José Murillo Fuentes (jjmurillo).
