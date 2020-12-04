@@ -1,4 +1,4 @@
-# EP4IDD
+# EP4IDD: A toolbox for Iterative Detection and Decoding with Expectation Propagation
 This project includes Matlab functions to simulate MIMO and Equalization systems with Iterative Detection and Decoding
 
 ## AUTHORSHIP
