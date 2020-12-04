@@ -1,0 +1,118 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.10000,0.50000,0.10000}%
+\definecolor{mycolor2}{rgb}{0.00000,0.80000,1.00000}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.952\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=20,
+xmax=35,
+xlabel style={font=\color{white!15!black}},
+xlabel={$\text{E}_\text{b}\text{/N}_\text{0}$},
+ymode=log,
+ymin=1e-05,
+ymax=1,
+yminorticks=true,
+ylabel style={font=\color{white!15!black}},
+ylabel={BER},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+yminorgrids,
+legend style={at={(0.03,0.03)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=blue, line width=1.1pt, mark=triangle, mark options={solid, rotate=180, blue}]
+  table[row sep=crcr]{%
+20	0.245764655\\
+21	0.23138371\\
+22	0.215959835\\
+23	0.1992345225\\
+24	0.18022109505\\
+25	0.1578043941\\
+26	0.1335109399\\
+27	0.10847245277\\
+28	0.0811838515\\
+29	0.05757470368\\
+30	0.04276943613\\
+31	0.031965950205\\
+32	0.0244418251\\
+33	0.018546329678\\
+34	0.012929017028\\
+35	0.0098408987\\
+};
+\addlegendentry{LMMSE}
+
+\addplot [color=orange, line width=1.1pt, mark=diamond, mark options={solid, orange}]
+  table[row sep=crcr]{%
+20	0.21910982\\
+21	0.198638195\\
+22	0.1697631581\\
+23	0.12930408394\\
+24	0.080058201615\\
+25	0.04264281807\\
+26	0.021096347005\\
+27	0.010582347613\\
+28	0.0054020943\\
+29	0.0023594175\\
+30	0.00081279355\\
+31	0.00031699265\\
+32	8.295885e-05\\
+33	2.7441e-05\\
+34	0\\
+35	0\\
+};
+\addlegendentry{EP-IC}
+
+\addplot [color=mycolor1, line width=1.1pt, mark=x, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+20	0.21352964\\
+21	0.189085064\\
+22	0.1511066421\\
+23	0.0982869395\\
+24	0.048689539258\\
+25	0.019373258095\\
+26	0.00708906892\\
+27	0.00238130272\\
+28	0.00028979475\\
+29	0\\
+30	0\\
+31	0\\
+32	0\\
+33	0\\
+34	0\\
+35	0\\
+};
+\addlegendentry{BEP}
+
+\addplot [color=mycolor2, line width=1.1pt, mark=square, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+20	0.21307829\\
+21	0.18766499685\\
+22	0.147533363915\\
+23	0.092346965958\\
+24	0.042843404488\\
+25	0.015761306553\\
+26	0.005340076525\\
+27	0.00150507879\\
+28	0.000131299185\\
+29	0\\
+30	0\\
+31	0\\
+32	0\\
+33	0\\
+34	0\\
+35	0\\
+};
+\addlegendentry{DEP}
+
+\end{axis}
+\end{tikzpicture}%

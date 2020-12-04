@@ -1,0 +1,356 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.10000,0.50000,0.10000}%
+\definecolor{mycolor2}{rgb}{0.00000,0.80000,1.00000}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.952\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=4,
+xmax=20,
+xlabel style={font=\color{white!15!black}},
+xlabel={$\text{E}_\text{b}\text{/N}_\text{0}$},
+ymode=log,
+ymin=1e-08,
+ymax=1,
+yminorticks=true,
+ylabel style={font=\color{white!15!black}},
+ylabel={BER},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+yminorgrids,
+legend style={at={(0.03,0.03)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=blue, line width=1.1pt, mark=triangle, mark options={solid, rotate=180, blue}]
+  table[row sep=crcr]{%
+4	0.233300855\\
+4.5	0.210698695\\
+5	0.176659423\\
+5.5	0.09363214242\\
+6	0.005438269986\\
+6.5	0.000107068292\\
+7	5.740764e-06\\
+};
+\addlegendentry{LMMSE}
+
+\addplot [color=blue, dashdotted, line width=1.1pt, mark=triangle, mark options={solid, rotate=270, blue}]
+  table[row sep=crcr]{%
+4	0.23251404\\
+4.5	0.20967217\\
+5	0.1676456338\\
+5.5	0.03724879457\\
+6	0.000894876584\\
+6.5	8.101895e-05\\
+7	5.030896e-06\\
+};
+\addlegendentry{LMMSE-GS}
+
+\addplot [color=orange, line width=1.1pt, mark=diamond, mark options={solid, orange}]
+  table[row sep=crcr]{%
+4	0.22439022\\
+4.5	0.1957828795\\
+5	0.1230214695\\
+5.5	0.014245648635\\
+6	0.001281667242\\
+6.5	0.000102222641\\
+7	5.740777e-06\\
+};
+\addlegendentry{EP-IC}
+
+\addplot [color=mycolor1, line width=1.1pt, mark=x, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+4	0.224336255\\
+4.5	0.1956051845\\
+5	0.12086572045\\
+5.5	0.0138502366\\
+6	0.001301760199\\
+6.5	0.000103488058\\
+7	5.802507e-06\\
+};
+\addlegendentry{BEP}
+
+\addplot [color=mycolor2, line width=1.1pt, mark=square, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+4	0.22430751\\
+4.5	0.195359274\\
+5	0.1182892724\\
+5.5	0.013411477895\\
+6	0.001305772955\\
+6.5	0.000105093032\\
+7	5.925967e-06\\
+};
+\addlegendentry{DEP}
+
+\addplot [color=mycolor2, line width=1.1pt, mark=o, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+4	0.23243291\\
+4.5	0.2083071075\\
+5	0.08514078965\\
+5.5	0.007546262625\\
+6	0.001086790782\\
+6.5	9.6821353e-05\\
+7	5.617324e-06\\
+};
+\addlegendentry{DEP-GS}
+
+\addplot [color=mycolor2, line width=1.1pt, mark=star, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+4	0.259083355\\
+4.5	0.241305275\\
+5	0.20676448\\
+5.5	0.121188167735\\
+6	0.055177589221\\
+6.5	0.032900704031\\
+7	0.02212197697\\
+};
+\addlegendentry{DEP-NSE}
+
+\addplot [color=blue, dashdotted, line width=1.1pt, mark=triangle, mark options={solid, rotate=180, blue}, forget plot]
+  table[row sep=crcr]{%
+6	0.23495206\\
+6.5	0.219644735\\
+7	0.20205022\\
+7.5	0.18014264\\
+8	0.14347368009\\
+8.5	0.034220913788\\
+9	8.419134e-05\\
+9.5	4.6296e-08\\
+10	0\\
+};
+\addplot [color=blue, dashdotted, line width=1.1pt, mark=triangle, mark options={solid, rotate=270, blue}, forget plot]
+  table[row sep=crcr]{%
+6	0.235486835\\
+6.5	0.220512965\\
+7	0.20333476\\
+7.5	0.181844835\\
+8	0.1371717315355\\
+8.5	0.0200240357835\\
+9	0.0001312977835\\
+9.5	4.6296e-08\\
+10	0\\
+};
+\addplot [color=orange, dashdotted, line width=1.1pt, mark=diamond, mark options={solid, orange}, forget plot]
+  table[row sep=crcr]{%
+6	0.229409975\\
+6.5	0.2127288\\
+7	0.19253785\\
+7.5	0.1616279941\\
+8	0.0474830884515\\
+8.5	0.0005074076955\\
+9	7.5463035e-06\\
+9.5	4.6296e-08\\
+10	0\\
+};
+\addplot [color=mycolor1, dashdotted, line width=1.1pt, mark=x, mark options={solid, mycolor1}, forget plot]
+  table[row sep=crcr]{%
+6	0.22941811\\
+6.5	0.212769895\\
+7	0.1926029\\
+7.5	0.16155227755\\
+8	0.0468419662515\\
+8.5	0.000508495618\\
+9	7.87038e-06\\
+9.5	4.6296e-08\\
+10	0\\
+};
+\addplot [color=mycolor2, dashdotted, line width=1.1pt, mark=square, mark options={solid, mycolor2}, forget plot]
+  table[row sep=crcr]{%
+6	0.22942398\\
+6.5	0.212734195\\
+7	0.192540225\\
+7.5	0.1608986859\\
+8	0.0435065998265\\
+8.5	0.000491296848\\
+9	8.1713035e-06\\
+9.5	4.6296e-08\\
+10	0\\
+};
+\addplot [color=mycolor2, dashdotted, line width=1.1pt, mark=o, mark options={solid, mycolor2}, forget plot]
+  table[row sep=crcr]{%
+6	0.229603145\\
+6.5	0.213919275\\
+7	0.19923365\\
+7.5	0.16745018805\\
+8	0.028440676041\\
+8.5	0.0004394427065\\
+9	7.384278e-06\\
+9.5	4.6296e-08\\
+10	0\\
+};
+\addplot [color=mycolor2, dashdotted, line width=1.1pt, mark=star, mark options={solid, mycolor2}, forget plot]
+  table[row sep=crcr]{%
+6	0.276156775\\
+6.5	0.26904864\\
+7	0.260233615\\
+7.5	0.24950411\\
+8	0.234049017\\
+8.5	0.2019121708225\\
+9	0.159797584759\\
+9.5	0.1192938390165\\
+10	0.0869433658395\\
+};
+\addplot [color=blue, dashed, line width=1.1pt, mark=triangle, mark options={solid, rotate=180, blue}, forget plot]
+  table[row sep=crcr]{%
+11	0.15859634\\
+11.5	0.144271605\\
+12	0.1282750495\\
+12.5	0.108704098\\
+13	0.072376453427\\
+13.5	0.0045622094425\\
+14	0\\
+14.5	0\\
+15	0\\
+};
+\addplot [color=blue, dashed, line width=1.1pt, mark=triangle, mark options={solid, rotate=270, blue}, forget plot]
+  table[row sep=crcr]{%
+11	0.164572445\\
+11.5	0.151883075\\
+12	0.138254835\\
+12.5	0.1228807975\\
+13	0.102232876799\\
+13.5	0.049727497498\\
+14	0.0117850886785\\
+14.5	0.00247187505\\
+15	0.0008361555\\
+};
+\addplot [color=orange, dashed, line width=1.1pt, mark=diamond, mark options={solid, orange}, forget plot]
+  table[row sep=crcr]{%
+11	0.152753805\\
+11.5	0.13670803\\
+12	0.1170460105\\
+12.5	0.0748403468925\\
+13	0.001712622625\\
+13.5	0\\
+14	0\\
+14.5	0\\
+15	0\\
+};
+\addplot [color=mycolor1, dashed, line width=1.1pt, mark=x, mark options={solid, mycolor1}, forget plot]
+  table[row sep=crcr]{%
+11	0.15300072\\
+11.5	0.137034735\\
+12	0.117461685\\
+12.5	0.075620625438\\
+13	0.001881943494\\
+13.5	0\\
+14	0\\
+14.5	0\\
+15	0\\
+};
+\addplot [color=mycolor2, dashed, line width=1.1pt, mark=square, mark options={solid, mycolor2}, forget plot]
+  table[row sep=crcr]{%
+11	0.15298143\\
+11.5	0.13698539\\
+12	0.117244891\\
+12.5	0.072866149823\\
+13	0.0014465892615\\
+13.5	0\\
+14	0\\
+14.5	0\\
+15	0\\
+};
+\addplot [color=mycolor2, dashed, line width=1.1pt, mark=o, mark options={solid, mycolor2}, forget plot]
+  table[row sep=crcr]{%
+11	0.15310653\\
+11.5	0.135670095\\
+12	0.112862416745\\
+12.5	0.0486440045825\\
+13	0.000850618493\\
+13.5	0\\
+14	0\\
+14.5	0\\
+15	0\\
+};
+\addplot [color=mycolor2, dashed, line width=1.1pt, mark=star, mark options={solid, mycolor2}, forget plot]
+  table[row sep=crcr]{%
+11	0.256212535\\
+11.5	0.25143679\\
+12	0.246055365\\
+12.5	0.24106585\\
+13	0.236220325\\
+13.5	0.2315689905\\
+14	0.226786331\\
+14.5	0.2214912729335\\
+15	0.21611747954\\
+};
+\addplot [color=blue, dotted, line width=1.1pt, mark=triangle, mark options={solid, rotate=180, blue}, forget plot]
+  table[row sep=crcr]{%
+17	0.0745780045\\
+17.5	0.0653381075\\
+18	0.055175926\\
+18.5	0.04272654\\
+19	0.0242850077\\
+19.5	0.002556762856\\
+20	0\\
+};
+\addplot [color=blue, dotted, line width=1.1pt, mark=triangle, mark options={solid, rotate=270, blue}, forget plot]
+  table[row sep=crcr]{%
+17	0.0918224015\\
+17.5	0.085343495\\
+18	0.0790101405\\
+18.5	0.0727860675\\
+19	0.0666102545\\
+19.5	0.0604062695\\
+20	0.0540228575\\
+};
+\addplot [color=orange, dotted, line width=1.1pt, mark=diamond, mark options={solid, orange}, forget plot]
+  table[row sep=crcr]{%
+17	0.0713929605\\
+17.5	0.060910367\\
+18	0.0474202505\\
+18.5	0.0173425948165\\
+19	3.17386765e-05\\
+19.5	0\\
+20	0\\
+};
+\addplot [color=mycolor1, dotted, line width=1.1pt, mark=x, mark options={solid, mycolor1}, forget plot]
+  table[row sep=crcr]{%
+17	0.072058113\\
+17.5	0.061826369\\
+18	0.048775082\\
+18.5	0.019717733037\\
+19	6.3497859e-05\\
+19.5	0\\
+20	0\\
+};
+\addplot [color=mycolor2, dotted, line width=1.1pt, mark=square, mark options={solid, mycolor2}, forget plot]
+  table[row sep=crcr]{%
+17	0.0720823605\\
+17.5	0.061839207\\
+18	0.0487089875\\
+18.5	0.018871106032\\
+19	4.9907178e-05\\
+19.5	0\\
+20	0\\
+};
+\addplot [color=mycolor2, dotted, line width=1.1pt, mark=o, mark options={solid, mycolor2}, forget plot]
+  table[row sep=crcr]{%
+17	0.0835822525\\
+17.5	0.07364758\\
+18	0.061003174\\
+18.5	0.040001266916\\
+19	0.0126055722845\\
+19.5	0.0020648552735\\
+20	0.00050128674\\
+};
+\addplot [color=mycolor2, dotted, line width=1.1pt, mark=star, mark options={solid, mycolor2}, forget plot]
+  table[row sep=crcr]{%
+17	0.22976532\\
+17.5	0.22070394\\
+18	0.210385555\\
+18.5	0.198888815\\
+19	0.1870220115\\
+19.5	0.1751966035\\
+20	0.164082856\\
+};
+\end{axis}
+\end{tikzpicture}%
