@@ -1,5 +1,5 @@
 function [x_decod,prob_b,nu_qi,nu_piDec,nu_piDecEP]=PBEPalg(A,complexFlag,sigma,y,H,pui_ldpc,nturbo,S_EP)
-
+%
 % Function: PBEPalg
 %
 % [x_decod,prob_b]=PBEPalg(A,complexFlag,sigma,y,H,pui_ldpc,nturbo,S_EP)
