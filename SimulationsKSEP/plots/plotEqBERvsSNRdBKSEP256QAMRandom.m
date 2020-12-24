@@ -61,7 +61,7 @@ semilogy(SNRdBSoft,min(BER_soft_BPEP_turbo),'d-.','color',mycolor1)
 grid on
 xlabel('E_b/N_0')
 ylabel('BER')
-axis([10 20 1e-4 .5])
+axis([12 20 1e-5 .3])
 % set(gca,'FontName','Times','FontSize',14)
 % matlab2tikz('BERvsEbN256QAMProakisT310.tex','height','\figureheight','width','\figurewidth')
 % title('256QAM, Proakis C')

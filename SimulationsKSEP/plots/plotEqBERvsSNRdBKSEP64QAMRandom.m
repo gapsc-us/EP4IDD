@@ -95,7 +95,7 @@ elseif dataEP.scenario==2,
     pbm='MIMO';
     folderName='../figuresMIMO/';
 end
-pause
+
 set(gca,'FontName','Times','FontSize',14)
 if dataEP.flagPSK, modName='PSK'; else modName='QAM'; end
 nameFig=[folderName,pbm,'BERvsEbN0',num2str(dataEP.M),modName,'Lim',num2str(dataEP.LLRlim),dataEP.channelName,'Fr',num2str(dataEP.numberFrames*dataEP.numberSimulations/1000),'k'];

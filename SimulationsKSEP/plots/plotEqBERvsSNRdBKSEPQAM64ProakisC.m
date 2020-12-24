@@ -107,7 +107,7 @@ end
 %axis([26 42 3e-5 .5])
 set(gca,'FontName','Times','FontSize',14)
 if dataEP.flagPSK, modName='PSK'; else modName='QAM'; end
-nameFig=[folderName,pbm,'BERvsSNRdB',num2str(dataEP.M),modName,'Lim',num2str(dataEP.LLRlim),dataEP.channelName,'Fr',num2str(dataEP.numberFrames*dataEP.numberSimulations)];
+nameFig=[folderName,pbm,'BERvsSNRdB',num2str(dataEP.M),modName,'Lim',num2str(dataEP.LLRlim),dataEP.channelName,'Fr',num2str(dataEP.numberFrames*dataEP.numberSimulations/1000),'k'];
 %matlab2tikz(nameFig,'height','\figureheight','width','\figurewidth')
 matlab2tikz([nameFig,'.tex'],'height','\figureheight','width','\figurewidth')
 
