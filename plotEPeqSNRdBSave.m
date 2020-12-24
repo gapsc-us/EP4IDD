@@ -1,7 +1,5 @@
 function plotEPeqSNRdB(dataEP,saveName,scenario)
 
-% Function: plotEPeqSNRdB
-%
 % plotEPeqSNRdB(dataEP,saveName,scenario)
 %
 % Author: Irene Santos Vel?zquez
