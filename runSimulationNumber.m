@@ -27,7 +27,7 @@ function runSimulationNumber(dataEP,scenario,simulationNumber)
 %   scenario: determines if MIMO or equalization is run, the range of
 %     dB to simulate, please, see the configuration files
 %   simulationNumber:  allows for several simulations run in paralel, 
-%     indicating the number of the simulation. . 
+%     indicating the number of the simulation. 
 
 dataEP.simulationNumber=simulationNumber;
 
