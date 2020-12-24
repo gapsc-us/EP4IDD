@@ -2,9 +2,9 @@ function pui=map(pvi,symbolmap,flaginterleaving,seed_inter)
 
 % Function: map
 %
-% pui=map(pvi,A,symbolmap)
+% pui=map(pvi,symbolmap,flaginterleaving,seed_inter)
 %
-% Author: Irene Santos Vel·zquez
+% Author: Irene Santos Vel√°zquez
 %
 % Contact: murillo@us.es, irenesantos@us.es
 %
