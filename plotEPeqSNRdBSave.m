@@ -1,9 +1,8 @@
 function plotEPeqSNRdB(dataEP,saveName,scenario)
-%(dataEP.numberFrames,n,dataEP.bits,dataEP.numberTaps,dataEP.numberAntennas,dataEP.numberChannels,numberSimulations,dataEP.M,dataEP.complexFlag,dataEP.flagOnlySoft,dataEP.flagPSK,scenario,dataEP.flagIterDec,flagBERalongT,dataEP.folderSave)
 
 % Function: plotEPeqSNRdB
 %
-% plotEPeqSNRdB(dataEP.numberFrames,n,dataEP.bits,dataEP.numberTaps,dataEP.numberAntennas,dataEP.numberChannels,numberSimulations,dataEP.M,dataEP.complexFlag,dataEP.flagOnlySoft,dataEP.flagPSK,scenario)
+% plotEPeqSNRdB(dataEP,saveName,scenario)
 %
 % Author: Irene Santos Vel?zquez
 %
