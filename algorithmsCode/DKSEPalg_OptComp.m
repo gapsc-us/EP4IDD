@@ -2,9 +2,9 @@ function [x_decod,prob_b,nub,varb]=DKSEPalg_OptComp(A,complexFlag,sigma,r,h,pui_
     
 % Function: DKSEPalg
 %
-% [x_decod,prob_b,nub,varb]=DKSEPalg(A,complexFlag,sigma,r,h,pui_ldpc,nturbo,nu_E,var_E)
+% [x_decod,prob_b,nub,varb]=DKSEPalg(A,complexFlag,sigma,r,h,pui_ldpc,nturbo,nu_E,var_E,L_EP)
 %
-% Author: Irene Santos Vel·zquez
+% Author: Irene Santos Vel√°zquez
 %
 % Contact: murillo@us.es, irenesantos@us.es
 %
@@ -20,25 +20,26 @@ function [x_decod,prob_b,nub,varb]=DKSEPalg_OptComp(A,complexFlag,sigma,r,h,pui_
 % flagextrinsic=0, then prob_b is the posterior distribution. 
 % 
 % Inputs: 
-% A is the set of symbols
-% complexFlag indicates if the symbols are complex or real (1-complex,
-% 0-real)
-% sigma is the standard deviation of the noise
-% r is the received signal
-% h is the channel
-% pui_ldpc is the probability of symbols at the output of the channel
-% decoder
-% nturbo is the number of the current turbo iteration
-% nu_E is the mean of the extrinsic distribution at the input of the
-% channel decoder
-% var_E is the mean of the extrinsic distribution at the input of the
-% channel decoder
+%  A is the set of symbols
+%  complexFlag indicates if the symbols are complex or real (1-complex,
+%    0-real)
+%  sigma is the standard deviation of the noise
+%  r is the received signal
+%  h is the channel
+%  pui_ldpc is the probability of symbols at the output of the channel
+%   decoder
+%  nturbo is the number of the current turbo iteration
+%  nu_E is the mean of the extrinsic distribution at the input of the
+%   channel decoder
+%  var_E is the mean of the extrinsic distribution at the input of the
+%   channel decoder
+%  L_EP number of iterations of the (inner) EP
 %
 % Output: 
-% x_decod is the estimation of the transmitted symbols
-% prob_b is the (posterior or extrinsic) probability for each symbol
-% nub is the mean of prob_b
-% varb is the variance of prob_b
+%  x_decod is the estimation of the transmitted symbols
+%  prob_b is the (posterior or extrinsic) probability for each symbol
+%  nub is the mean of prob_b
+%  varb is the variance of prob_b
 %
 % References: 
 % [Santos19] = I. Santos, J. J. Murillo-Fuentes, and E. Arias-de-Reyna, "A 
@@ -140,7 +141,7 @@ for l=1:L_EP+1
     nu_qback=zeros(window,output_length);
     Cinv_qback=zeros(window,window,output_length);
     
-    % Hacemos el backwards como un forward d·ndole la vuelta a los taps, u e y.
+    % Hacemos el backwards como un forward d√°ndole la vuelta a los taps, u e y.
     hb=fliplr(h);
     hb_flip=fliplr(hb);
     rb=flipud(r);
