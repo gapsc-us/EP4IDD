@@ -3,7 +3,7 @@ function runSimulationNumber(dataEP,scenario,simulationNumber)
 % Function: runSimulationNumber(dataEP,scenario,simulationNumber)
 %
 %
-% Author: Irene Santos Velazquez, Juan José Murillo Fuentes
+% Author: Irene Santos, Juan Jose Murillo-Fuentes
 %
 % Contact: murillo@us.es, irenesantos@us.es
 %
