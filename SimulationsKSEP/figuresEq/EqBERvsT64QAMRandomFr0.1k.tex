@@ -1,0 +1,210 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{1.00000,0.00000,1.00000}%
+\definecolor{mycolor2}{rgb}{0.00000,0.80000,1.00000}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.951\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=0,
+xmax=10,
+xlabel style={font=\color{white!15!black}},
+xlabel={T},
+ymode=log,
+ymin=0.001,
+ymax=0.1,
+yminorticks=true,
+ylabel style={font=\color{white!15!black}},
+ylabel={BER},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+yminorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=blue, dotted, line width=1.1pt, mark=triangle, mark options={solid, rotate=180, blue}]
+  table[row sep=crcr]{%
+0	0.071087335899\\
+1	0.057457639019\\
+2	0.053913822513\\
+3	0.052619060933\\
+4	0.05197409537\\
+5	0.05161700355\\
+6	0.0513835734\\
+7	0.0511854916\\
+8	0.05107665025\\
+9	0.05098553525\\
+10	0.05092933605\\
+};
+\addlegendentry{KS}
+
+\addplot [color=mycolor1, dotted, line width=1.1pt, mark=square, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+0	0.039315927581\\
+1	0.038148606376\\
+2	0.037791683778\\
+3	0.037635815995\\
+4	0.0375408988\\
+5	0.037464821\\
+6	0.037425024355\\
+7	0.03739548339\\
+8	0.0373785381\\
+9	0.0373622323\\
+10	0.0373469\\
+};
+\addlegendentry{SEP-S1}
+
+\addplot [color=mycolor2, dotted, line width=1.1pt, mark=square, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+0	0.055815001287\\
+1	0.027909210791\\
+2	0.015994573233\\
+3	0.011002694273\\
+4	0.00804488877\\
+5	0.00638545509\\
+6	0.00549809059\\
+7	0.004960433835\\
+8	0.00465850811\\
+9	0.00446417135\\
+10	0.004321548015\\
+};
+\addlegendentry{KSEP-S1}
+
+\addplot [color=mycolor1, dashdotted, line width=1.1pt, mark=square, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+0	0.039315927581\\
+1	0.038148606376\\
+2	0.037791683778\\
+3	0.037635815995\\
+4	0.0375408988\\
+5	0.037464821\\
+6	0.037425024355\\
+7	0.03739548339\\
+8	0.0373785381\\
+9	0.0373622323\\
+10	0.0373469\\
+};
+\addlegendentry{SEP-S2}
+
+\addplot [color=mycolor2, dashdotted, line width=1.1pt, mark=+, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+0	0.049215874856\\
+1	0.019072138512\\
+2	0.011069532948\\
+3	0.00618597727\\
+4	0.004113919\\
+5	0.0033459414\\
+6	0.002946537745\\
+7	0.0026910192\\
+8	0.0025230051\\
+9	0.0024412155\\
+10	0.00236982815\\
+};
+\addlegendentry{KSEP-S2}
+
+\addplot [color=mycolor1, dashed, line width=1.1pt, mark=square, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+0	0.039315927581\\
+1	0.038148606376\\
+2	0.037791683778\\
+3	0.037635815995\\
+4	0.0375408988\\
+5	0.037464821\\
+6	0.037425024355\\
+7	0.03739548339\\
+8	0.0373785381\\
+9	0.0373622323\\
+10	0.0373469\\
+};
+\addlegendentry{SEP-S3}
+
+\addplot [color=mycolor2, dashdotted, line width=1.1pt, mark=o, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+0	0.045503266008\\
+1	0.015585512394\\
+2	0.00859100741\\
+3	0.004643060408\\
+4	0.003359611078\\
+5	0.0027989838\\
+6	0.0024741835\\
+7	0.0023176885\\
+8	0.00221942675\\
+9	0.0021700126\\
+10	0.0021338395\\
+};
+\addlegendentry{KSEP-S3}
+
+\addplot [color=mycolor1, dashed, line width=1.1pt, mark=square, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+0	0.039315927581\\
+1	0.038148606376\\
+2	0.037791683778\\
+3	0.037635815995\\
+4	0.0375408988\\
+5	0.037464821\\
+6	0.037425024355\\
+7	0.03739548339\\
+8	0.0373785381\\
+9	0.0373622323\\
+10	0.0373469\\
+};
+\addlegendentry{SEP-S4}
+
+\addplot [color=mycolor2, dashed, line width=1.1pt, mark=diamond, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+0	0.043108203468\\
+1	0.013901747969\\
+2	0.007122405415\\
+3	0.004034141873\\
+4	0.0030585997\\
+5	0.00258477195\\
+6	0.002331490405\\
+7	0.002204157295\\
+8	0.00215136485\\
+9	0.0020965008\\
+10	0.002074309\\
+};
+\addlegendentry{KSEP-S4}
+
+\addplot [color=mycolor1, line width=1.1pt, mark=square, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+0	0.039315927581\\
+1	0.038148606376\\
+2	0.037791683778\\
+3	0.037635815995\\
+4	0.0375408988\\
+5	0.037464821\\
+6	0.037425024355\\
+7	0.03739548339\\
+8	0.0373785381\\
+9	0.0373622323\\
+10	0.0373469\\
+};
+\addlegendentry{SEP-S10}
+
+\addplot [color=mycolor2, line width=1.1pt, mark=x, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+0	0.037801393831\\
+1	0.010756403046\\
+2	0.004923354675\\
+3	0.00327880653\\
+4	0.002663918895\\
+5	0.002348138678\\
+6	0.0021944312\\
+7	0.00212188295\\
+8	0.0020676315\\
+9	0.00203422375\\
+10	0.0020182645\\
+};
+\addlegendentry{KSEP-S10}
+
+\end{axis}
+\end{tikzpicture}%
