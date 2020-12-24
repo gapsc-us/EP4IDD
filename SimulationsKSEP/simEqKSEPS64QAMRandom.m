@@ -35,4 +35,7 @@ disp('S=10 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
 dataEP.EPiterations=10;
 mainEP(flagRun,dataEP,scenario),toc
 
+if flagRun==0
+    plotBERvsT
+end
 toc
