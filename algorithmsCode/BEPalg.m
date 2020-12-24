@@ -1,10 +1,10 @@
 function [x_decod,prob_b]=BEPalg(A,complexFlag,sigma,y,H,pui_ldpc,S_EP)
-
+%
 % Function: BEPalg
 %
-% [x_decod,prob_b]=BEPalg(A,complexFlag,sigma,y,H,pui_ldpc)
+% [x_decod,prob_b]=BEPalg(A,complexFlag,sigma,y,H,pui_ldpc, S_EP)
 %
-% Author: Irene Santos Vel·zquez
+% Author: Irene Santos Vel√°zquez
 %
 % Contact: murillo@us.es, irenesantos@us.es
 %
@@ -17,28 +17,29 @@ function [x_decod,prob_b]=BEPalg(A,complexFlag,sigma,y,H,pui_ldpc,S_EP)
 % distribution. 
 % 
 % Inputs: 
-% A is the set of symbols
-% complexFlag indicates if the symbols are complex or real (1-complex,
-% 0-real)
-% sigma is the standard deviation of the noise
-% y is the received signal
-% H is the channel matrix
-% pui_ldpc is the probability of symbols at the output of the channel
-% decoder
+%  A is the set of symbols
+%   complexFlag indicates if the symbols are complex or real (1-complex,
+%   0-real)
+%  sigma is the standard deviation of the noise
+%  y is the received signal
+%  H is the channel matrix
+%  pui_ldpc is the probability of symbols at the output of the channel
+%   decoder
+%  S_EP: number of iterations of the (inner) EP, default value is 10
 %
 % Output: 
-% x_decod is the estimation of the transmitted symbols
-% prob_b is the (posterior or extrinsic) probability for each symbol
+%  x_decod is the estimation of the transmitted symbols
+%  prob_b is the (posterior or extrinsic) probability for each symbol
 %
 % References: 
 % [Santos16] = I. Santos, J. J. Murillo-Fuentes, R. Boloix-Tortosa, E. 
 % Arias-de-Reyna, and P. M. Olmos, ?Expectation propagation as turbo 
 % equalizer in ISI channels,? IEEE Transactions on Communications, vol. 65, 
 % no. 1, pp. 360-370, Jan 2017. 
-% [Cespedes18] = J. CÈspedes, P. M. Olmos, M. S·nchez-Fern·ndez and F. 
-% PÈrez-Cruz, ?Probabilistic MIMO symbol detection with expectation 
+% [Cespedes18] = J. C√©spedes, P. M. Olmos, M. S√°nchez-Fern√°ndez and F. 
+% P√©rez-Cruz, ?Probabilistic MIMO symbol detection with expectation 
 % consistency approximate inference,? in IEEE Trans. On Vehicular Tech., 
-% vol. 67, no. 4, pp. 3481-3494, April 2018. 
+% vol. 67, no. 4, pp. 3481-3494, April 2018.
 
 input_length=size(H,2);
 M=length(A);
