@@ -1,6 +1,6 @@
 function runSimulationNumber(dataEP,scenario,simulationNumber)
 %
-% Function: mainEPeq_cluster(dataEP,scenario,simulationNumber)
+% Function: runSimulationNumber(dataEP,scenario,simulationNumber)
 %
 %
 % Author: Irene Santos Velazquez, Juan José Murillo Fuentes
@@ -13,12 +13,22 @@ function runSimulationNumber(dataEP,scenario,simulationNumber)
 % Optimal) and outputs the results into a text file.
 %
 % Inputs:
-%   dataEp: is a struct with many parameters defining the simulation,
-%         please, see the configuration files
+%   dataEP: is a struct with many parameters defining the simulation,
+%         please, see the configuration files. Some fields are:
+%     dataEP.numberFrames is the number of words transmitted per simulation
+%     dataEP.bits is the size of information dataEP.bits
+%     dataEP.numberTaps is the number of taps of the channel in equalization
+%     dataEP.numberAntennas is the number of transmitted and receive antennas in MIMO
+%     dataEP.numberChannels is the number of simulated channels
+%     dataEP.M is the constellation size
+%     dataEP.flagPSK is 1 if the complex constellation is a PSK and 0 if it is a QAM
+%     dataEP.flagIterDec is 1 if the figures of number of iterations of the channel
+%     decoder is plotted
 %   scenario: determines if MIMO or equalization is run, the range of
-%         dB to simulate, please, see the configuration files
-%   simulationNumber: allows for several simulations run in paralel, 
-%         indicating the number of the simulation.
+%     dB to simulate, please, see the configuration files
+%   simulationNumber:  allows for several simulations run in paralel, 
+%     indicating the number of the simulation, the range of dB for
+%     the SNR,...please, see the configuration files. 
 
 dataEP.simulationNumber=simulationNumber;
 
