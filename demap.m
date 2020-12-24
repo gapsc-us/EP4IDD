@@ -2,9 +2,9 @@ function pvi=demap(pui,symbolmap,flaginterleaving,seed_inter)
 
 % Function: demap
 %
-% pvi=demap(pui,symbolmap)
+% pvi=demap(pui,symbolmap,flaginterleaving,seed_inter)
 %
-% Author: Irene Santos Vel·zquez
+% Author: Irene Santos Vel√°zquez
 %
 % Contact: murillo@us.es, irenesantos@us.es
 %
