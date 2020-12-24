@@ -32,9 +32,9 @@ The folder ParityCheckMatrix contains some LDPC parity matrices used.
 
 The rest of the files and the folder algorithmsCode are the core of the project and are used by the three cases in the three folders aforementioned.
 
-You will need the communications toolbox by Matlab. Also, we use the tikz toolbox to generate tex files, by this is not needed for the simulations and pdf figures can be generated in any case.
+You will need the communications toolbox by Matlab. Also, we use the tikz toolbox to generate tex files, but this is not needed for the simulations and pdf figures can be generated in any case, just do not pay attention to messages on tikz issues.
 
-In any of the three folders above you will find some .m files along with some folders. Any of these .m files corresponds to a simulation. This files call to a initialisation file, in folder confiFiles, that configures the whole simulation. Then calls to the main core functions in the main (upper) folder.  Results are saved on ResultsXXXX. Once terminated, you can use the .m functions in the plots folder to get the figure, that will be placed in the folder figuresXXXX
+In any of the three folders above you will find some .m files along with some folders. Any of these .m files corresponds to a simulation. These files call to a initialisation file, in folder confiFiles, that configures the whole simulation. Then calls to the main core functions in the main (upper) folder.  Results are saved on ResultsXXXX. Once terminated, you can use the .m functions in the plots folder to get the figure, that will be placed in the folder figuresXXXX
 
 ### Put it into work
 We hope you will find the parameters in the initialization files, in folder confiFiles, intuitive enough to easily design your own. You may pick the most similar simulation to your scenario and then change parameters.
