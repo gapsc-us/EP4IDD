@@ -4,7 +4,7 @@ function [x_decod,prob_b,ti,hi_2,nu_qi,nu_piDec,nu_piDecEP]=DBEPalg(A,complexFla
 %
 % [x_decod,prob_b,ti,hi_2]=DBEPalg(A,complexFlag,sigma,y,H,pui_ldpc,nturbo,nu_E,var_E)
 %
-% Author: Irene Santos Vel·zquez
+% Author: Irene Santos Vel√°zquez
 %
 % Contact: murillo@us.es, irenesantos@us.es
 %
@@ -17,26 +17,22 @@ function [x_decod,prob_b,ti,hi_2,nu_qi,nu_piDec,nu_piDecEP]=DBEPalg(A,complexFla
 % distribution. 
 % 
 % Inputs: 
-% A is the set of symbols
-% complexFlag indicates if the symbols are complex or real (1-complex,
-% 0-real)
-% sigma is the standard deviation of the noise
-% y is the received signal
-% H is the channel matrix
-% pui_ldpc is the probability of symbols at the output of the channel
-% decoder
-% nturbo is the number of the current turbo iteration
-% nu_E is the mean of the extrinsic distribution at the input of the
-% channel decoder
-% var_E is the mean of the extrinsic distribution at the input of the
-% channel decoder
+%  A is the set of symbols
+%   complexFlag indicates if the symbols are complex or real (1-complex,
+%   0-real)
+%  sigma is the standard deviation of the noise
+%  y is the received signal
+%  H is the channel matrix
+%  pui_ldpc is the probability of symbols at the output of the channel
+%   decoder
+%  S_EP: number of iterations of the (inner) EP, default value is 10
 %
 % Output: 
-% x_decod is the estimation of the transmitted symbols
-% prob_b is the (posterior or extrinsic) probability for each symbol
-% ti is the mean of the extrinsic distribution at the output of the equalizer
-% hi_2 is the variance of the extrinsic distribution at the output of the 
-% equalizer
+%  x_decod is the estimation of the transmitted symbols
+%  prob_b is the (posterior or extrinsic) probability for each symbol
+%  ti is the mean of the extrinsic distribution at the output of the equalizer
+%  hi_2 is the variance of the extrinsic distribution at the output of the 
+%   equalizer
 %
 % References: 
 % [Santos19] = I. Santos, J. J. Murillo-Fuentes, and E. Arias-de-Reyna, ?A 
