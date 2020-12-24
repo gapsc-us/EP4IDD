@@ -3,7 +3,7 @@ function runSimulationNumber(dataEP,scenario,simulationNumber)
 % Function: mainEPeq_cluster(dataEP,scenario,simulationNumber)
 %
 %
-% Author: Irene Santos Vel?zquez
+% Author: Irene Santos Velazquez, Juan José Murillo Fuentes
 %
 % Contact: murillo@us.es, irenesantos@us.es
 %
