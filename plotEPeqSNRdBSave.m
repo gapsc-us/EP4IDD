@@ -9,24 +9,24 @@ function plotEPeqSNRdB(dataEP,saveName,scenario)
 % Created 23/05/2018
 %
 % Description: This function plots the results that have been written in a
-% log file
+% log file. The simulation stores values for several runs in parallel. This
+% function reads them all and generates a .mat file with the values of the curves
+% (averaged over the different runs)
 %
 % Inputs:
-% dataEP.numberFrames is the number of words transmitted per simulation
-% n is the length of the transmitted block in symbols.
-% dataEP.bits is the size of information dataEP.bits
-% dataEP.numberTaps is the number of taps of the channel in equalization
-% dataEP.numberAntennas is the number of transmitted and receive antennas in MIMO
-% dataEP.numberChannels is the number of simulated channels
-% numberSimulations is the number of diferent simulations, or average using MC
-% dataEP.M is the constellation size
-% complexFlag is 1 if the constellation is complex
-% flagOnlySoft is 1 if we only plot soft estimations
-% dataEP.flagPSK is 1 if the complex constellation is a PSK and 0 if it is a QAM
-% scenario if 1 equalization is executed, if 2 MIMO is executed
-% dataEP.flagIterDec is 1 if the figures of number of iterations of the channel
-% decoder is plotted
-% flagBERalongT to 1 if we also plot the BER versus the number of turbo iterations
+%  dataEP is a structure with several fields such as:
+%     dataEP.numberFrames is the number of words transmitted per simulation
+%     n is the length of the transmitted block in symbols.
+%     dataEP.bits is the size of information dataEP.bits
+%     dataEP.numberTaps is the number of taps of the channel in equalization
+%     dataEP.numberAntennas is the number of transmitted and receive antennas in MIMO
+%     dataEP.numberChannels is the number of simulated channels
+%     dataEP.M is the constellation size
+%     dataEP.flagPSK is 1 if the complex constellation is a PSK and 0 if it is a QAM
+%     dataEP.flagIterDec is 1 if the figures of number of iterations of the channel
+%       decoder is plotted
+%  saveName indicates the name of file to save the .mat with the overal results
+%  scenario if 1 equalization is executed, if 2 MIMO is executed
 
 DELIMITER=' ';
 HEADERLINES=4;
