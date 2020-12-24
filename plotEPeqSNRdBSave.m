@@ -26,7 +26,8 @@ function plotEPeqSNRdB(dataEP,saveName,scenario)
 %     dataEP.flagIterDec is 1 if the figures of number of iterations of the channel
 %       decoder is plotted
 %  saveName indicates the name of file to save the .mat with the overal results
-%  scenario if 1 equalization is executed, if 2 MIMO is executed
+%  scenario: determines if MIMO or equalization is run, the range of
+%     dB to simulate, ..., please, see the configuration files.
 
 DELIMITER=' ';
 HEADERLINES=4;
