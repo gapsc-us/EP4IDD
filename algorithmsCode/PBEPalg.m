@@ -2,9 +2,9 @@ function [x_decod,prob_b,nu_qi,nu_piDec,nu_piDecEP]=PBEPalg(A,complexFlag,sigma,
 
 % Function: PBEPalg
 %
-% [x_decod,prob_b]=PBEPalg(A,complexFlag,sigma,y,H,pui_ldpc,nturbo)
+% [x_decod,prob_b]=PBEPalg(A,complexFlag,sigma,y,H,pui_ldpc,nturbo,S_EP)
 %
-% Author: Irene Santos Vel·zquez
+% Author: Irene Santos Vel√°zquez
 %
 % Contact: murillo@us.es, irenesantos@us.es
 %
@@ -17,19 +17,20 @@ function [x_decod,prob_b,nu_qi,nu_piDec,nu_piDecEP]=PBEPalg(A,complexFlag,sigma,
 % distribution. 
 % 
 % Inputs: 
-% A is the set of symbols
-% complexFlag indicates if the symbols are complex or real (1-complex,
-% 0-real)
-% sigma is the standard deviation of the noise
-% y is the received signal
-% H is the channel matrix
-% pui_ldpc is the probability of symbols at the output of the channel
-% decoder
-% nturbo is the number of the current turbo iteration
+%  A is the set of symbols
+%  complexFlag indicates if the symbols are complex or real (1-complex,
+%   0-real)
+%  sigma is the standard deviation of the noise
+%  y is the received signal
+%  H is the channel matrix
+%  pui_ldpc is the probability of symbols at the output of the channel
+%   decoder
+%  nturbo is the number of the current turbo iteration
+%  S_EP number of iterations of the (inner) EP, default value S_EP=3
 %
 % Output: 
-% x_decod is the estimation of the transmitted symbols
-% prob_b is the (posterior or extrinsic) probability for each symbol
+%  x_decod is the estimation of the transmitted symbols
+%  prob_b is the (posterior or extrinsic) probability for each symbol
 %
 % References: 
 % [Santos18] = I. Santos, J. J. Murillo-Fuentes, E. Arias-de-Reyna, and P. 
