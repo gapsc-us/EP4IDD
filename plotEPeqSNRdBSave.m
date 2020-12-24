@@ -2,7 +2,7 @@ function plotEPeqSNRdB(dataEP,saveName,scenario)
 %
 % plotEPeqSNRdB(dataEP,saveName,scenario)
 %
-% Author: Irene Santos Velazquez, Juan José Murillo Fuentes
+% Author: Irene Santos, Juan Jose Murillo-Fuentes
 %
 % Contact: murillo@us.es, irenesantos@us.es
 %
