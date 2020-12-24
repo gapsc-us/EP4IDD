@@ -1,7 +1,7 @@
 function runSimulationNumber(dataEP,scenario,simulationNumber)
-% Function: mainEPeq_cluster
 %
-% mainEPeq_cluster(numberFrames,dataEP.bits,channelBlockLength,M,complexFlag,scenario,numberTaps,numberAntennas,numberChannels,channel_h,simulationNumber,SNRdBIni,SNRdBStep,SNRdBEnd,flagPSK,numberTurbo,varnoiseCH,flagInterleaving,flagIterDec)
+% Function: mainEPeq_cluster(dataEP,scenario,simulationNumber)
+%
 %
 % Author: Irene Santos Vel?zquez
 %
@@ -11,6 +11,14 @@ function runSimulationNumber(dataEP,scenario,simulationNumber)
 %
 % Description: This function runs different equalizers (MMSE, EP,
 % Optimal) and outputs the results into a text file.
+%
+% Inputs:
+%   dataEp: is a struct with many parameters defining the simulation,
+%         please, see the configuration files
+%   scenario: determines if MIMO or equalization is run, the range of
+%         dB to simulate, please, see the configuration files
+%   simulationNumber: allows for several simulations run in paralel, 
+%         indicating the number of the simulation.
 
 dataEP.simulationNumber=simulationNumber;
 
