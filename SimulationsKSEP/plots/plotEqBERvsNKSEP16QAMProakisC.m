@@ -19,7 +19,7 @@ mycolor3=[1,0,1];
  %snr=1;
  kk=5;
 set(0, 'DefaultLineLineWidth', 1.1);
-load ../Results/ResultsN/BERN256Lim3
+load ../ResultsEQ/Results16QAMLim3ProakisCN256/BERvsSNRdBN25616QAMLim3ProakisCFr1000.mat
  
  %semilogy(SNRdBSoft-3,BER_hard_MMSE,'v-k'),hold on
  set(0, 'DefaultLineLineWidth', 0.5);
@@ -29,26 +29,26 @@ load ../Results/ResultsN/BERN256Lim3
  semilogy(SNRdBSoft,BER_soft_PKSEP_turbo(kk,:),'o-','color',mycolor2)
  set(0, 'DefaultLineLineWidth', 1.1);
  
- load ../Results/ResultsN/BERN512Lim3
+load ../ResultsEQ/Results16QAMLim3ProakisCN512/BERvsSNRdBN51216QAMLim3ProakisCFr1000.mat
   semilogy(SNRdBSoft,BER_soft_MMSE_turbo(kk,:),'v-.b')
  semilogy(SNRdBSoft,BER_soft_BPEP_turbo(kk,:),'d-.','color',mycolor1)
   semilogy(SNRdBSoft,BER_soft_SEP_turbo(kk,:),'s-.','color',mycolor)
  semilogy(SNRdBSoft,BER_soft_PKSEP_turbo(kk,:),'o-.','color',mycolor2)
 
-  load ../Results/ResultsN/BERN1024Lim3
+load ../ResultsEQ/Results16QAMLim3ProakisCN1024/BERvsSNRdBN102416QAMLim3ProakisCFr1000.mat
   semilogy(SNRdBSoft,BER_soft_MMSE_turbo(kk,:),'v--b')
  semilogy(SNRdBSoft,BER_soft_BPEP_turbo(kk,:),'d--','color',mycolor1)
   semilogy(SNRdBSoft,BER_soft_SEP_turbo(kk,:),'s--','color',mycolor)
  semilogy(SNRdBSoft,BER_soft_PKSEP_turbo(kk,:),'o--','color',mycolor2)
  
-  load ../Results/ResultsN/BERN2048Lim3
+load ../ResultsEQ/Results16QAMLim3ProakisCN2048/BERvsSNRdBN204816QAMLim3ProakisCFr1000.mat
   semilogy(SNRdBSoft,BER_soft_MMSE_turbo(kk,:),'v:b')
  semilogy(SNRdBSoft,BER_soft_BPEP_turbo(kk,:),'d:','color',mycolor1)
   semilogy(SNRdBSoft,BER_soft_SEP_turbo(kk,:),'s:','color',mycolor)
  semilogy(SNRdBSoft,BER_soft_PKSEP_turbo(kk,:),'o:','color',mycolor2)
 
  
-   load ../Results/ResultsN/BERN4096Lim3
+load ../ResultsEQ/Results16QAMLim3ProakisCN4096/BERvsSNRdBN409616QAMLim3ProakisCFr1000.mat
    set(0, 'DefaultLineLineWidth', 1.5);
   semilogy(SNRdBSoft,BER_soft_MMSE_turbo(kk,:),'v-b')
  semilogy(SNRdBSoft,BER_soft_BPEP_turbo(kk,:),'d-','color',mycolor1)
